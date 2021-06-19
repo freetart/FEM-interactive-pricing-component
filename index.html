@@ -12,6 +12,67 @@
 </head>
 
 <body>
+  <main class="container">
+    <!-- title -->
+    <div class="title">
+      <h1 class="title__heading heading">Simple, traffic-based pricing</h1>
+      <p class="title__lead text">Sign-up for our 30-day trial. No credit card required.</p>
+      <img src="./assets/images/pattern-circles.svg" alt="circle background pattern" class="title__bg-pattern">
+    </div>
+    <!-- pricing card -->
+    <article class="pricing">
+      <div class="pricing__content">
+        <div class="pricing__body">
+          <!-- pricing info -->
+          <div class="pricing__info">
+            <p class="pricing__views text">100k Pageviews</p>
+            <h4 class="pricing__price heading">
+              $16.00
+              <span class="pricing__option text">/month</span>
+            </h4>
+          </div>
+          <!-- slider -->
+          <div class="slider">
+            <input type="range" class="slider__slide" />
+          </div>
+          <!-- plans -->
+          <div class="pricing__plans">
+            <p class="pricing__plan text">Monthly Billing</p>
+            <label class="switch">
+              <input type="checkbox" class="switch__toggle" />
+              <span class="switch__circle"></span>
+            </label>
+            <p class="pricing__plan text">
+              Yearly Billing
+              <small class="pricing__tag text">25% discount</small>
+            </p>
+          </div>
+        </div>
+        <footer class="pricing__footer">
+          <!-- features -->
+          <div class="pricing__features">
+            <!-- single feature -->
+            <div class="pricing__feature">
+              <img src="./assets/images/icon-check.svg" alt="checkmark icon" />
+              <p class="pricing__desc text">Unlimited websites</p>
+            </div>
+            <!-- single feature -->
+            <div class="pricing__feature">
+              <img src="./assets/images/icon-check.svg" alt="checkmark icon" />
+              <p class="pricing__desc text">100% data ownership</p>
+            </div>
+            <!-- single feature -->
+            <div class="pricing__feature">
+              <img src="./assets/images/icon-check.svg" alt="checkmark icon" />
+              <p class="pricing__desc text">Email reports</p>
+            </div>
+          </div>
+          <!-- submit -->
+          <button type="submit" class="btn btn--submit heading">Start my trial</button>
+        </footer>
+      </div>
+    </article>
+  </main>
   <!-- main js -->
   <script src="./js/script.js"></script>
 </body>
