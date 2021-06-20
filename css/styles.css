@@ -69,7 +69,6 @@ body {
   justify-content: center;
   flex-direction: column;
   padding: var(--section-spacing);
-  min-height: 100vh;
   overflow-x: hidden;
 }
 
