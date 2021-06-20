@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- favicon -->
   <link rel="icon" href="./assets/images/favicon/koala.ico" />
+  <!-- aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.css">
   <title>Frontend Mentor | Interactive Pricing Component</title>
@@ -15,14 +17,14 @@
   <!-- bg pattern -->
   <img src="./assets/images/bg-pattern.svg" alt="" class="bg-pattern" />
   <!-- title -->
-  <header class="title container">
+  <header class="title container" data-aos="fade-down">
     <h1 class="title__heading heading">Simple, traffic-based pricing</h1>
     <p class="title__lead text">Sign-up for our 30-day trial. No credit card required.</p>
     <img src="./assets/images/pattern-circles.svg" alt="circle background pattern" class="title__bg-pattern">
   </header>
   <main>
     <!-- pricing card -->
-    <article class="pricing container">
+    <article class="pricing container" data-aos="fade-up">
       <div class="pricing__content">
         <div class="pricing__body">
           <!-- pricing info -->
@@ -87,6 +89,11 @@
     </h3>
     <img src="./assets/images/logo/habibdevgif.gif" alt="logo" class="tag__logo" />
   </article>
+  <!-- aos -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+  AOS.init({ offset: 100, duration: 1000, once: true });
+  </script>
   <!-- main js -->
   <script src="./js/script.js"></script>
 </body>

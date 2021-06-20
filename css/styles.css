@@ -454,7 +454,7 @@ media queries
 
 @media screen and (max-width: 350px) {
   .switch {
-    width: 15rem;
+    width: 13rem;
   }
 
   .switch__checkbox:checked+.switch__toggle:before {
