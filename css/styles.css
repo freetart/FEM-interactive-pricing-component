@@ -64,6 +64,13 @@ html {
 body {
   font-family: 'Manrope', sans-serif;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: var(--section-spacing);
+  height: 100%;
+  overflow-x: hidden;
 }
 
 img {
@@ -116,15 +123,6 @@ global classes
 layout
 ===============
 */
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: var(--section-spacing);
-  height: 100vh;
-}
-
 .bg-pattern {
   position: absolute;
   top: 0;
@@ -367,12 +365,12 @@ tag
   text-align: center;
   flex-wrap: wrap;
   padding: 2rem 2rem 1rem 2rem;
-  background-color: var(--black);
+  margin-top: 5rem;
 }
 
 .tag__heading {
   font-size: var(--size-xxs);
-  color: var(--white);
+  color: var(--black);
 }
 
 .tag__link {
@@ -387,4 +385,81 @@ tag
 
 .tag__logo {
   width: 5rem;
+}
+
+/*
+=============== 
+media queries
+===============
+*/
+@media screen and (max-width: 660px) {
+  .bg-pattern {
+    transform: scale(2.5);
+  }
+
+  .pricing {
+    width: 90vw;
+  }
+
+  .pricing__tag {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bg-pattern {
+    transform: scale(3.5);
+    top: 10rem;
+  }
+
+  .pricing__info {
+    flex-direction: column;
+  }
+
+  .pricing__plan {
+    text-align: center;
+  }
+
+
+  .pricing__footer {
+    flex-direction: column;
+  }
+
+  .btn--submit {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .switch {
+    width: 10rem;
+  }
+
+  .switch__checkbox:checked+.switch__toggle:before {
+    -webkit-transform: translateX(4.5rem);
+    -ms-transform: translateX(4.5rem);
+    transform: translateX(4.5rem);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .switch__checkbox:checked+.switch__toggle:before {
+    -webkit-transform: translateX(3rem);
+    -ms-transform: translateX(3rem);
+    transform: translateX(3rem);
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+  .switch {
+    width: 15rem;
+  }
+
+  .switch__checkbox:checked+.switch__toggle:before {
+    -webkit-transform: translateX(2.5rem);
+    -ms-transform: translateX(2.5rem);
+    transform: translateX(2.5rem);
+  }
 }

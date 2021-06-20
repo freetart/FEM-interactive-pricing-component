@@ -14,69 +14,67 @@
 <body>
   <!-- bg pattern -->
   <img src="./assets/images/bg-pattern.svg" alt="" class="bg-pattern" />
-  <div class="wrapper">
-    <!-- title -->
-    <header class="title">
-      <h1 class="title__heading heading">Simple, traffic-based pricing</h1>
-      <p class="title__lead text">Sign-up for our 30-day trial. No credit card required.</p>
-      <img src="./assets/images/pattern-circles.svg" alt="circle background pattern" class="title__bg-pattern">
-    </header>
-    <main>
-      <!-- pricing card -->
-      <article class="pricing">
-        <div class="pricing__content">
-          <div class="pricing__body">
-            <!-- pricing info -->
-            <div class="pricing__info">
-              <p class="pricing__views text">100k Pageviews</p>
-              <h4 class="pricing__price heading">
-                $16.00
-                <span class="pricing__option text">/month</span>
-              </h4>
+  <!-- title -->
+  <header class="title container">
+    <h1 class="title__heading heading">Simple, traffic-based pricing</h1>
+    <p class="title__lead text">Sign-up for our 30-day trial. No credit card required.</p>
+    <img src="./assets/images/pattern-circles.svg" alt="circle background pattern" class="title__bg-pattern">
+  </header>
+  <main>
+    <!-- pricing card -->
+    <article class="pricing container">
+      <div class="pricing__content">
+        <div class="pricing__body">
+          <!-- pricing info -->
+          <div class="pricing__info">
+            <p class="pricing__views text">100k Pageviews</p>
+            <h4 class="pricing__price heading">
+              $16.00
+              <span class="pricing__option text">/month</span>
+            </h4>
+          </div>
+          <!-- slider -->
+          <div class="slider">
+            <input type="range" class="slider__slide" />
+          </div>
+          <!-- plans -->
+          <div class="pricing__plans">
+            <p class="pricing__plan text">Monthly Billing</p>
+            <label class="switch">
+              <input type="checkbox" class="switch__checkbox" />
+              <span class="switch__toggle"></span>
+            </label>
+            <p class="pricing__plan text">Yearly Billing</p>
+            <small class="pricing__tag text">25% discount</small>
+          </div>
+        </div>
+        <footer class="pricing__footer">
+          <!-- features -->
+          <div class="pricing__features">
+            <!-- single feature -->
+            <div class="pricing__feature">
+              <img src="./assets/images/icon-check.svg" alt="checkmark icon" class="pricing__icon" />
+              <p class="pricing__desc text">Unlimited websites</p>
             </div>
-            <!-- slider -->
-            <div class="slider">
-              <input type="range" class="slider__slide" />
+            <!-- single feature -->
+            <div class="pricing__feature">
+              <img src="./assets/images/icon-check.svg" alt="checkmark icon" class="pricing__icon" />
+              <p class="pricing__desc text">100% data ownership</p>
             </div>
-            <!-- plans -->
-            <div class="pricing__plans">
-              <p class="pricing__plan text">Monthly Billing</p>
-              <label class="switch">
-                <input type="checkbox" class="switch__checkbox" />
-                <span class="switch__toggle"></span>
-              </label>
-              <p class="pricing__plan text">Yearly Billing</p>
-              <small class="pricing__tag text">25% discount</small>
+            <!-- single feature -->
+            <div class="pricing__feature">
+              <img src="./assets/images/icon-check.svg" alt="checkmark icon" class="pricing__icon" />
+              <p class="pricing__desc text">Email reports</p>
             </div>
           </div>
-          <footer class="pricing__footer">
-            <!-- features -->
-            <div class="pricing__features">
-              <!-- single feature -->
-              <div class="pricing__feature">
-                <img src="./assets/images/icon-check.svg" alt="checkmark icon" class="pricing__icon" />
-                <p class="pricing__desc text">Unlimited websites</p>
-              </div>
-              <!-- single feature -->
-              <div class="pricing__feature">
-                <img src="./assets/images/icon-check.svg" alt="checkmark icon" class="pricing__icon" />
-                <p class="pricing__desc text">100% data ownership</p>
-              </div>
-              <!-- single feature -->
-              <div class="pricing__feature">
-                <img src="./assets/images/icon-check.svg" alt="checkmark icon" class="pricing__icon" />
-                <p class="pricing__desc text">Email reports</p>
-              </div>
-            </div>
-            <!-- submit -->
-            <button type="submit" class="btn btn--submit text">Start my trial</button>
-          </footer>
-        </div>
-      </article>
-    </main>
-  </div>
+          <!-- submit -->
+          <button type="submit" class="btn btn--submit text">Start my trial</button>
+        </footer>
+      </div>
+    </article>
+  </main>
   <!-- tag -->
-  <footer class="tag">
+  <article class="tag">
     <h3 class="tag__heading">
       /* project for
       <a href="https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8" target="_blank" class="tag__link">
@@ -86,7 +84,7 @@
       */
     </h3>
     <img src="./assets/images/logo/habibdevgif.gif" alt="logo" class="tag__logo" />
-  </footer>
+  </article>
   <!-- main js -->
   <script src="./js/script.js"></script>
 </body>
