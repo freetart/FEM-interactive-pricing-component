@@ -153,15 +153,16 @@ components
 }
 
 .slider__slide::-webkit-slider-thumb {
+  cursor: pointer;
   webkit-appearance: none;
   appearance: none;
   background: var(--strong-cyan);
   width: 2.5rem;
   height: 2.5rem;
   border: 0;
-  cursor: pointer;
   border-radius: 50%;
 }
+
 
 .slider__slide::-moz-range-thumb {
   background: var(--strong-cyan);
@@ -450,7 +451,6 @@ media queries
     transform: translateX(3rem);
   }
 }
-
 
 @media screen and (max-width: 350px) {
   .switch {
