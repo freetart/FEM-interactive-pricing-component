@@ -171,6 +171,7 @@ components
   border: 0;
   cursor: pointer;
   border-radius: 50%;
+  box-shadow: var(--main-shadow);
 }
 
 /* switch */
@@ -229,6 +230,12 @@ components
   outline: 0;
   border-radius: var(--btn-radius);
   padding: 1rem 2rem;
+  transition: var(--main-transition);
+}
+
+.btn:hover,
+.btn:focus {
+  transform: translateY(-0.5rem);
 }
 
 .btn--submit {
