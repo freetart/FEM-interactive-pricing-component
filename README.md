@@ -4,6 +4,7 @@ interactive pricing component challenge for frontend mentor
 #### Features
 - range slider
 - toggle button
+- preloader
 - responsive design
 - animated content
 
