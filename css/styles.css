@@ -49,6 +49,7 @@ variables
   --gap: 5rem;
   /* radius */
   --main-radius: 1rem;
+  --btn-radius: 5rem;
   /* shadows */
   --main-shadow: 0.1rem 0.3rem 1rem rgba(0, 0, 0, .1);
   /* transitions */
@@ -58,7 +59,7 @@ variables
   --size-xl: 4rem;
   --size-lg: 3.5rem;
   --size-md: 3rem;
-  --size-sm: 2.5;
+  --size-sm: 2.5rem;
   --size-xs: 2rem;
   --size-xxs: 1.5rem;
 }
@@ -84,6 +85,15 @@ body {
   background-color: var(--black);
   color: var(--white);
   font-family: 'Manrope', sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: var(--section-spacing);
 }
 
 img {
@@ -129,4 +139,222 @@ global classes
   font-weight: 600;
   letter-spacing: 0.1rem;
   line-height: 1.6;
+}
+
+/*
+=============== 
+components
+===============
+*/
+
+/* slider */
+.slider {
+  width: 100%;
+  margin: 4rem 0;
+}
+
+.slider__slide {
+  webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 1.2rem;
+  background: var(--light-grayish-blue-100);
+  border-radius: var(--main-radius);
+}
+
+.slider__slide::-webkit-slider-thumb {
+  webkit-appearance: none;
+  appearance: none;
+  background: var(--strong-cyan);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider__slide::-moz-range-thumb {
+  background: var(--strong-cyan);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4.5rem;
+  height: 2.55rem;
+}
+
+.switch__checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch__toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 2.55rem;
+  background-color: var(--light-grayish-blue-100);
+  -webkit-transition: var(--main-transition);
+  transition: var(--main-transition);
+}
+
+.switch__toggle:before {
+  position: absolute;
+  content: "";
+  height: 1.95rem;
+  width: 1.95rem;
+  left: 0.3rem;
+  bottom: 0.3rem;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: var(--main-transition);
+  transition: var(--main-transition);
+}
+
+.switch__checkbox:checked+.switch__toggle {
+  background-color: var(--strong-cyan);
+}
+
+.switch__checkbox:checked+.switch__toggle:before {
+  -webkit-transform: translateX(1.95rem);
+  -ms-transform: translateX(1.95rem);
+  transform: translateX(1.95rem);
+}
+
+/* button */
+.btn {
+  border: 0;
+  outline: 0;
+  border-radius: var(--btn-radius);
+  padding: 1rem 2rem;
+}
+
+.btn--submit {
+  background-color: var(--dark-blue);
+  color: var(--pale-blue);
+  font-size: var(--size-xxs);
+}
+
+/*
+=============== 
+title
+===============
+*/
+.title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.title__heading {
+  font-size: var(--size-xxl);
+}
+
+.title__lead {
+  font-size: var(--size-xs);
+}
+
+.title__bg-pattern {
+  position: absolute;
+  width: 15rem;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+/*
+=============== 
+pricing card
+===============
+*/
+.pricing {
+  background-color: var(--white);
+  color: var(--black);
+  width: 600px;
+  border-radius: var(--main-radius)
+}
+
+.pricing__content {
+  padding: 4rem 3rem;
+  width: 100%;
+}
+
+.pricing__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pricing__views {
+  font-size: var(--size-xxs);
+  color: var(--grayish-blue);
+}
+
+.pricing__price {
+  font-size: var(--size-md);
+}
+
+.pricing__option {
+  font-size: var(--size-xxs);
+  color: var(--grayish-blue);
+}
+
+.pricing__plans {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.pricing__plan {
+  margin: 0 2rem;
+  font-size: var(--size-xxs);
+  color: var(--grayish-blue);
+}
+
+.pricing__tag {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.5rem;
+  background-color: var(--light-red);
+  color: var(--light-grayish-red);
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--main-radius)
+}
+
+.pricing__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4rem;
+  border-top: 0.2rem solid var(--light-grayish-blue-100);
+}
+
+.pricing__feature {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.pricing__icon {
+  width: 1.5rem;
+  margin-right: 2rem;
+}
+
+.pricing__desc {
+  font-size: var(--size-xxs);
+  color: var(--grayish-blue);
 }
