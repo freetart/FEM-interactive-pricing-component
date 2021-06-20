@@ -82,18 +82,25 @@ html {
 }
 
 body {
-  background-color: var(--black);
-  color: var(--white);
   font-family: 'Manrope', sans-serif;
 }
 
 main {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   padding: var(--section-spacing);
+}
+
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
 }
 
 img {
@@ -258,11 +265,11 @@ title
 }
 
 .title__heading {
-  font-size: var(--size-xxl);
+  font-size: var(--size-xl);
 }
 
 .title__lead {
-  font-size: var(--size-xs);
+  font-size: var(--size-xxs);
 }
 
 .title__bg-pattern {
@@ -271,6 +278,7 @@ title
   top: 0;
   left: 50%;
   transform: translate(-50%, -20%);
+  z-index: -1
 }
 
 /*
@@ -282,7 +290,8 @@ pricing card
   background-color: var(--white);
   color: var(--black);
   width: 600px;
-  border-radius: var(--main-radius)
+  border-radius: var(--main-radius);
+  box-shadow: var(--main-shadow);
 }
 
 .pricing__content {
@@ -299,10 +308,12 @@ pricing card
 .pricing__views {
   font-size: var(--size-xxs);
   color: var(--grayish-blue);
+  text-transform: uppercase;
 }
 
 .pricing__price {
   font-size: var(--size-md);
+  color: var(--dark-blue);
 }
 
 .pricing__option {
