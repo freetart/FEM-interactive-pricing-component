@@ -263,16 +263,7 @@ preloader
   z-index: 2000;
   transition: 0.5s ease-in-out;
   opacity: 1;
-}
-
-.preloader__bg-pattern {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.1;
+  overflow-x: hidden;
 }
 
 .preloader__content {
@@ -361,6 +352,7 @@ title
   position: relative;
   text-align: center;
   margin-bottom: 10rem;
+  overflow-x: hidden;
 }
 
 .title__heading {
@@ -391,6 +383,7 @@ pricing card
   width: 600px;
   border-radius: var(--main-radius);
   box-shadow: var(--main-shadow);
+  overflow-x: hidden;
 }
 
 .pricing__content {
